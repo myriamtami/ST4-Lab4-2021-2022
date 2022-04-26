@@ -151,7 +151,7 @@ def remove_non_index_term(query,inverted_index):
 def pre_processed_query(query,inverted_index):
     tokenized_query = article_tokenize_other(query)
     filt_query = remove_non_index_term(tokenized_query,inverted_index)
-    filtered_query = remove_stop_words({"query":filt_query},load_stop_word("./Data/Time/TIME.STP"))
+    filtered_query = remove_stop_words({"query":filt_query},load_stop_word("./Data/TIME/TIME.STP"))
     normalized_query = collection_lemmatize(filtered_query)
     return normalized_query["query"]
 
